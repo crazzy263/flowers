@@ -1,3 +1,18 @@
-PODFILE CHECKSUM: 2a512bad040aef0b1dd2660df36deb3ec459c610
+PODS:
+  - PPHelpMe (1.0.2)
+  - PPRevealSideViewController (1.2.3):
+    - PPHelpMe
+  - WAAppRouting (0.0.5)
+
+DEPENDENCIES:
+  - PPRevealSideViewController
+  - WAAppRouting
+
+SPEC CHECKSUMS:
+  PPHelpMe: 243c40d2fad33ebdcc6b158c0db54893e0cc2d14
+  PPRevealSideViewController: e74d7b490738b39388f3ab9166f89dbe751560b4
+  WAAppRouting: f678fa0dd488af81ee04aeab49e577f5ce187ae0
+
+PODFILE CHECKSUM: 9b35549b95593447f1835631b3040a9c1628438e
 
 COCOAPODS: 1.1.1

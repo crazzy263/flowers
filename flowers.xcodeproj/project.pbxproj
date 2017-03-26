@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0D0964851E87F06900C2AA53 /* LeftMenuController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0964841E87F06900C2AA53 /* LeftMenuController.m */; };
+		0D09648C1E87F0E800C2AA53 /* BaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D09648B1E87F0E800C2AA53 /* BaseTableViewController.m */; };
+		0D09648F1E87F0FD00C2AA53 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D09648E1E87F0FD00C2AA53 /* BaseViewController.m */; };
+		0D0964921E87F1C600C2AA53 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0D0964911E87F1C600C2AA53 /* BaseTableViewCell.m */; };
 		0DEFDF4B1E86E8A300FD2D52 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDF4A1E86E8A300FD2D52 /* main.m */; };
 		0DEFDF4E1E86E8A300FD2D52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDF4D1E86E8A300FD2D52 /* AppDelegate.m */; };
 		0DEFDF511E86E8A300FD2D52 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDF501E86E8A300FD2D52 /* ViewController.m */; };
@@ -18,6 +22,14 @@
 
 /* Begin PBXFileReference section */
 		019D452E450FBB89B23CF26E /* Pods-flowers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-flowers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-flowers/Pods-flowers.debug.xcconfig"; sourceTree = "<group>"; };
+		0D0964831E87F06900C2AA53 /* LeftMenuController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuController.h; sourceTree = "<group>"; };
+		0D0964841E87F06900C2AA53 /* LeftMenuController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftMenuController.m; sourceTree = "<group>"; };
+		0D09648A1E87F0E800C2AA53 /* BaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewController.h; sourceTree = "<group>"; };
+		0D09648B1E87F0E800C2AA53 /* BaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewController.m; sourceTree = "<group>"; };
+		0D09648D1E87F0FD00C2AA53 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
+		0D09648E1E87F0FD00C2AA53 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		0D0964901E87F1C600C2AA53 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		0D0964911E87F1C600C2AA53 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		0DEFDF461E86E8A300FD2D52 /* flowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = flowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0DEFDF4A1E86E8A300FD2D52 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		0DEFDF4C1E86E8A300FD2D52 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -44,6 +56,60 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D0964811E87ED0300C2AA53 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				0D0964821E87ED3500C2AA53 /* LeftMenu */,
+			);
+			name = Modules;
+			sourceTree = "<group>";
+		};
+		0D0964821E87ED3500C2AA53 /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				0D0964831E87F06900C2AA53 /* LeftMenuController.h */,
+				0D0964841E87F06900C2AA53 /* LeftMenuController.m */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		0D0964861E87F0BD00C2AA53 /* BaseClasses */ = {
+			isa = PBXGroup;
+			children = (
+				0D0964891E87F0D400C2AA53 /* Controllers */,
+				0D0964881E87F0D100C2AA53 /* Cells */,
+				0D0964871E87F0C900C2AA53 /* Views */,
+			);
+			name = BaseClasses;
+			sourceTree = "<group>";
+		};
+		0D0964871E87F0C900C2AA53 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		0D0964881E87F0D100C2AA53 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				0D0964901E87F1C600C2AA53 /* BaseTableViewCell.h */,
+				0D0964911E87F1C600C2AA53 /* BaseTableViewCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		0D0964891E87F0D400C2AA53 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0D09648A1E87F0E800C2AA53 /* BaseTableViewController.h */,
+				0D09648B1E87F0E800C2AA53 /* BaseTableViewController.m */,
+				0D09648D1E87F0FD00C2AA53 /* BaseViewController.h */,
+				0D09648E1E87F0FD00C2AA53 /* BaseViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		0DEFDF3D1E86E8A300FD2D52 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +131,8 @@
 		0DEFDF481E86E8A300FD2D52 /* flowers */ = {
 			isa = PBXGroup;
 			children = (
+				0D0964861E87F0BD00C2AA53 /* BaseClasses */,
+				0D0964811E87ED0300C2AA53 /* Modules */,
 				0DEFDF4C1E86E8A300FD2D52 /* AppDelegate.h */,
 				0DEFDF4D1E86E8A300FD2D52 /* AppDelegate.m */,
 				0DEFDF4F1E86E8A300FD2D52 /* ViewController.h */,
@@ -227,8 +295,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEFDF511E86E8A300FD2D52 /* ViewController.m in Sources */,
+				0D09648F1E87F0FD00C2AA53 /* BaseViewController.m in Sources */,
 				0DEFDF4E1E86E8A300FD2D52 /* AppDelegate.m in Sources */,
 				0DEFDF4B1E86E8A300FD2D52 /* main.m in Sources */,
+				0D0964851E87F06900C2AA53 /* LeftMenuController.m in Sources */,
+				0D0964921E87F1C600C2AA53 /* BaseTableViewCell.m in Sources */,
+				0D09648C1E87F0E800C2AA53 /* BaseTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,6 +459,7 @@
 				0DEFDF5F1E86E8A300FD2D52 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
