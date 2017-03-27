@@ -10,15 +10,26 @@
 
 @implementation BaseTableViewCell
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    self = [super initWithStyle:style reuseIdentifier:reuseIdentifier];
+    if (self) {
+        [self commonInit];
+    }
+    return self;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
-    // Initialization code
+    [self commonInit];
 }
 
-- (void)setSelected:(BOOL)selected animated:(BOOL)animated {
-    [super setSelected:selected animated:animated];
-
-    // Configure the view for the selected state
+- (void)commonInit {
+    self.selectionStyle = UITableViewCellSelectionStyleNone;
 }
+
++ (NSString *)cellIdentifier {
+    return NSStringFromClass(self);
+}
+
 
 @end

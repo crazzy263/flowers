@@ -10,4 +10,10 @@
 
 @interface BaseTableViewController : UITableViewController
 
+- (void) showMessage:(NSString*)message withTitle:(NSString *)title;
+
+- (void) setupNavBar;
+
+- (void) setupUI;
+    
 @end

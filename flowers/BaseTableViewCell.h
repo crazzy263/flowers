@@ -10,4 +10,7 @@
 
 @interface BaseTableViewCell : UITableViewCell
 
+- (void)commonInit;
++ (NSString *)cellIdentifier;
+
 @end
