@@ -1,18 +1,121 @@
 PODS:
+  - AFNetworkActivityLogger (2.0.4):
+    - AFNetworking/NSURLConnection (~> 2.0)
+    - AFNetworking/NSURLSession (~> 2.0)
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/NSURLSession (2.6.3):
+    - AFNetworking/Reachability
+    - AFNetworking/Security
+    - AFNetworking/Serialization
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
+    - AFNetworking/NSURLConnection
+    - AFNetworking/NSURLSession
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - FBSDKCoreKit (4.20.2):
+    - Bolts (~> 1.7)
+  - GoogleMaps (2.2.0):
+    - GoogleMaps/Maps (= 2.2.0)
+  - GoogleMaps/Base (2.2.0)
+  - GoogleMaps/Maps (2.2.0):
+    - GoogleMaps/Base
+  - GooglePlaces (2.2.0):
+    - GoogleMaps/Base (= 2.2.0)
+  - libextobjc (0.4.1):
+    - libextobjc/EXTADT (= 0.4.1)
+    - libextobjc/EXTConcreteProtocol (= 0.4.1)
+    - libextobjc/EXTKeyPathCoding (= 0.4.1)
+    - libextobjc/EXTNil (= 0.4.1)
+    - libextobjc/EXTSafeCategory (= 0.4.1)
+    - libextobjc/EXTScope (= 0.4.1)
+    - libextobjc/EXTSelectorChecking (= 0.4.1)
+    - libextobjc/EXTSynthesize (= 0.4.1)
+    - libextobjc/NSInvocation+EXT (= 0.4.1)
+    - libextobjc/NSMethodSignature+EXT (= 0.4.1)
+    - libextobjc/RuntimeExtensions (= 0.4.1)
+    - libextobjc/UmbrellaHeader (= 0.4.1)
+  - libextobjc/EXTADT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTConcreteProtocol (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTKeyPathCoding (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTNil (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSafeCategory (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTScope (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSelectorChecking (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/EXTSynthesize (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSInvocation+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/NSMethodSignature+EXT (0.4.1):
+    - libextobjc/RuntimeExtensions
+  - libextobjc/RuntimeExtensions (0.4.1)
+  - libextobjc/UmbrellaHeader (0.4.1)
+  - Mantle (2.1.0):
+    - Mantle/extobjc (= 2.1.0)
+  - Mantle/extobjc (2.1.0)
   - PPHelpMe (1.0.2)
   - PPRevealSideViewController (1.2.3):
     - PPHelpMe
+  - SDWebImage (4.0.0):
+    - SDWebImage/Core (= 4.0.0)
+  - SDWebImage/Core (4.0.0)
+  - UITextView+Placeholder (1.2.0)
+  - VK-ios-sdk (1.4.6)
   - WAAppRouting (0.0.5)
 
 DEPENDENCIES:
+  - AFNetworkActivityLogger
+  - AFNetworking
+  - FBSDKCoreKit
+  - GoogleMaps
+  - GooglePlaces
+  - libextobjc
+  - Mantle
   - PPRevealSideViewController
+  - SDWebImage
+  - UITextView+Placeholder
+  - VK-ios-sdk
   - WAAppRouting
 
 SPEC CHECKSUMS:
+  AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  FBSDKCoreKit: 82eac696eb6157da5f4266c3a241f00e9bd72471
+  GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
+  GooglePlaces: bca867d5e9da15384c794b945e4226848bc6e9d9
+  libextobjc: a650fc1bf489a3d3a9bc2e621efa3e1006fc5471
+  Mantle: 2fa750afa478cd625a94230fbf1c13462f29395b
   PPHelpMe: 243c40d2fad33ebdcc6b158c0db54893e0cc2d14
   PPRevealSideViewController: e74d7b490738b39388f3ab9166f89dbe751560b4
+  SDWebImage: 76a6348bdc74eb5a55dd08a091ef298e56b55e41
+  UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
+  VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
   WAAppRouting: f678fa0dd488af81ee04aeab49e577f5ce187ae0
 
-PODFILE CHECKSUM: 9b35549b95593447f1835631b3040a9c1628438e
+PODFILE CHECKSUM: 77ad67afdcbf49d47c3012dc68785effbb20d665
 
-COCOAPODS: 1.1.1
+COCOAPODS: 1.2.0

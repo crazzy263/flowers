@@ -7,5 +7,14 @@ target 'flowers' do
   pod 'PPRevealSideViewController'
   pod 'WAAppRouting'
   # Pods for flowers
-
+  pod 'Mantle'
+  pod 'VK-ios-sdk'
+  pod 'FBSDKCoreKit'
+  pod 'libextobjc'
+  pod 'AFNetworking'
+  pod 'AFNetworkActivityLogger'
+  pod 'SDWebImage'
+  pod 'UITextView+Placeholder'
+  pod 'GoogleMaps'
+  pod 'GooglePlaces'
 end
