@@ -27,20 +27,23 @@
     UINavigationController *navController    = [[UINavigationController alloc] initWithRootViewController:collectFlowers];
     PPRevealSideViewController *revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:navController];
    
-    
     LeftMenuController *leftMenu = [[LeftMenuController alloc] init];
     [revealSideViewController preloadViewController:leftMenu forSide:PPRevealSideDirectionLeft];
-    revealSideViewController.options = PPRevealSideOptionsNone;
     
-   [revealSideViewController resetOption:PPRevealSideOptionsiOS7StatusBarFading];
-[revealSideViewController setOption:PPRevealSideOptionsiOS7StatusBarFading];
-     revealSideViewController.fakeiOS7StatusBarColor = [UIColor whiteColor];
+//    revealSideViewController.options = PPRevealSideOptionsNone;
+//    [revealSideViewController resetOption:PPRevealSideOptionsiOS7StatusBarFading];
+//    [revealSideViewController setOption:PPRevealSideOptionsiOS7StatusBarFading];
+//     revealSideViewController.fakeiOS7StatusBarColor = [UIColor whiteColor];
+    
     self.router = [WAAppRouter defaultRouter];
     [self.router.registrar registerAppRoutePath:@"collectFlowers{CollectFlowersViewController}" presentingController:revealSideViewController];
     [self.router.registrar registerAppRoutePath:@"left{LeftMenuController}" presentingController:revealSideViewController];
     
-    self.window.rootViewController = revealSideViewController;
+    [revealSideViewController resetOption:PPRevealSideOptionsiOS7StatusBarFading];
+    [revealSideViewController setOption:PPRevealSideOptionsNoStatusBar];
+//    [revealSideViewController setFakeiOS7StatusBarColor:[UIColor whiteColor]];
     
+    self.window.rootViewController = revealSideViewController;
     [self.window makeKeyAndVisible];
     return YES;
 }

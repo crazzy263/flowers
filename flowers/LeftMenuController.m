@@ -32,7 +32,6 @@
                         @[
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Выход") Image:@"" RoutePath: @""],
                         ]
-                         
                     ];
 }
 
@@ -40,11 +39,6 @@
     [super setupNavBar];
 }
 
-
-
--  (UIStatusBarStyle)preferredStatusBarStyle {
-    return  UIStatusBarStyleDefault;
-}
 
 #pragma mark - Table view data source
 
