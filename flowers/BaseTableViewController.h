@@ -7,13 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseViewController.h"
 
-@interface BaseTableViewController : UITableViewController
+@interface BaseTableViewController : BaseViewController <UITableViewDelegate, UITableViewDataSource>
 
-- (void) showMessage:(NSString*)message withTitle:(NSString *)title;
+@property (nonatomic, strong) UITableView *tableView;
 
-- (void) setupNavBar;
-
-- (void) setupUI;
     
 @end

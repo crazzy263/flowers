@@ -45,4 +45,16 @@
     [vc presentViewController:alert animated:YES completion:nil];
 }
 
+- (void)reloadFromAppLinkRefresh {
+    
+}
+
+- (void)addSideMenuButton {
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStyleDone target:self action:@selector(pushLeft)];
+}
+
+- (void)pushLeft {
+    [(AppDelegate *)[[UIApplication sharedApplication] delegate] goTo:@"flowers://left"];
+}
+
 @end

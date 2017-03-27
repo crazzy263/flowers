@@ -12,6 +12,7 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
+- (void)goTo:(NSString *)route, ... ;
 
 @end
 

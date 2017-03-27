@@ -18,19 +18,19 @@
 
 - (void) setupUI {
     [super setupUI];
-    
+    self.view.backgroundColor = [UIColor whiteColor];
     self.sections = @[  @[
-                            [[LeftMenuItemModel alloc] initWithText: @"Собрать букет" Image:@"" RoutePath: @""],
-                            [[LeftMenuItemModel alloc] initWithText: @"Примеры букетов" Image:@"" RoutePath: @""], // Перва секция (хидер с логином)
-                            [[LeftMenuItemModel alloc] initWithText: @"Профиль" Image:@"" RoutePath: @""],
-                            [[LeftMenuItemModel alloc] initWithText: @"Настройки" Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Собрать букет") Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Примеры букетов") Image:@"" RoutePath: @""], // Перва секция (хидер с логином)
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Профиль") Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Настройки") Image:@"" RoutePath: @""],
                         ],
                         @[
-                            [[LeftMenuItemModel alloc] initWithText: @"Как это работает?" Image:@"" RoutePath: @""],
-                            [[LeftMenuItemModel alloc] initWithText: @"Поддержка" Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Как это работает?") Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Поддержка") Image:@"" RoutePath: @""],
                         ],
                         @[
-                            [[LeftMenuItemModel alloc] initWithText: @"Выход" Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Выход") Image:@"" RoutePath: @""],
                         ]
                          
                     ];
@@ -41,6 +41,10 @@
 }
 
 
+
+-  (UIStatusBarStyle)preferredStatusBarStyle {
+    return  UIStatusBarStyleDefault;
+}
 
 #pragma mark - Table view data source
 

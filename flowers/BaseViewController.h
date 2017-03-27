@@ -7,14 +7,18 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <WAAppRouting/WAAppRouting.h>
+#import <PPRevealSideViewController/PPRevealSideViewController.h>
+#import "AppDelegate.h"
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController  <WAAppRouterTargetControllerProtocol>
 
+@property (nonatomic, strong) id commonObject;
 - (void) showMessage:(NSString*)message withTitle:(NSString *)title;
 
 - (void) setupNavBar;
 
 - (void) setupUI;
 
-
+- (void) addSideMenuButton;
 @end

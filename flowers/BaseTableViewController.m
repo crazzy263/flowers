@@ -14,52 +14,40 @@
 
 @implementation BaseTableViewController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setupNavBar];
-    [self setupUI];
+- (void)loadView {
+    [super loadView];
     
-}
-
-- (void) setupNavBar {
+    // Allocate table view
+    UITableView *tableView    = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
+    tableView.delegate        = self;
+    tableView.dataSource      = self;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
     
-}
-
-- (void) setupUI  {
+    // We are not using UITableViewController because we don't want the view to be the tableview
+    [self.view addSubview:tableView];
     
-}
+    // Setup constraints as seen https://developer.apple.com/library/ios/featuredarticles/ViewControllerPGforiPhoneOS/ViewLoadingandUnloading/ViewLoadingandUnloading.html#//apple_ref/doc/uid/TP40007457-CH10-SW36
 
-- (void)showMessage:(NSString*)message withTitle:(NSString *)title {
-    UIAlertController * alert=   [UIAlertController
-                                  alertControllerWithTitle:title
-                                  message:message
-                                  preferredStyle:UIAlertControllerStyleAlert];
     
-    UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"Ок" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
-        
-        //do something when click button
-    }];
-    [alert addAction:okAction];
-    UIViewController *vc = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
-    [vc presentViewController:alert animated:YES completion:nil];
+    self.tableView = tableView;
 }
 
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void) viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+    
+    self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 0;
 }
 
-
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return nil;
+}
 
 @end
