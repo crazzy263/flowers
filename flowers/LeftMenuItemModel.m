@@ -10,12 +10,13 @@
 
 @implementation LeftMenuItemModel
 
-- (instancetype) initWithText : (NSString*) text Image : (NSString*) image RoutePath : (NSString*) route {
+- (instancetype) initWithText : (NSString*) text Image : (NSString*) image RoutePath : (NSString*) route Style : (LeftMenuItemStyle) style {
     self = [super init];
     if (self) {
         self.rowLabelText = text;
         self.rowImage = image;
         self.rowRoute = route;
+        self.rowStyle = style;
     }
     return self;
 }

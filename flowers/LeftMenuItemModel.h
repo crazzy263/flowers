@@ -9,13 +9,19 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+typedef NS_ENUM(NSInteger, LeftMenuItemStyle) {
+    LeftMenuItemStyleNone = 0,
+    LeftMenuItemStyleBottomSeparator,
+    LeftMenuItemStyleExit
+};
+
 @interface LeftMenuItemModel : NSObject
 
 @property (nonatomic, copy) NSString* rowImage;
 @property (nonatomic, copy) NSString* rowLabelText;
 @property (nonatomic, copy) NSString* rowRoute;
-
+@property (nonatomic) LeftMenuItemStyle rowStyle;
 @property (nonatomic, strong) void (^itemTapHandler)(LeftMenuItemModel* menuItem);
 
-- (instancetype) initWithText : (NSString*) text Image : (NSString*) image RoutePath : (NSString*) route;
+- (instancetype) initWithText : (NSString*) text Image : (NSString*) image RoutePath : (NSString*) route Style : (LeftMenuItemStyle) style ;
 @end

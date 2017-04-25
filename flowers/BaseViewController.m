@@ -26,7 +26,7 @@
 }
 
 - (void) setupUI  {
-    
+    self.view.backgroundColor = [UIColor whiteColor];
 }
 
 
@@ -50,7 +50,16 @@
 }
 
 - (void)addSideMenuButton {
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"Left" style:UIBarButtonItemStyleDone target:self action:@selector(pushLeft)];
+    UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
+    [button setImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
+    button.frame = CGRectMake(0, 0, 30.0, 30.0);
+    UIBarButtonItem* barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
+    button.tintColor = [UIColor blackColor];
+    [button addTarget:self action:@selector(pushLeft) forControlEvents:UIControlEventTouchUpInside];
+    
+    
+    self.navigationItem.leftBarButtonItem = barButton;
+
 }
 
 - (void)pushLeft {

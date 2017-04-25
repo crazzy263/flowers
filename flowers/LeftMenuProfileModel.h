@@ -1,13 +1,13 @@
 //
-//  LeftMenuPresenter.h
+//  LeftMenuProfileModel.h
 //  flowers
 //
-//  Created by iOS Developer on 27.03.17.
+//  Created by Crazzy on 25.04.17.
 //  Copyright © 2017 Maksim Kis. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 
-@interface LeftMenuPresenter : NSObject
+@interface LeftMenuProfileModel : NSObject
 
 @end

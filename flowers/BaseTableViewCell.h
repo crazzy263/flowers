@@ -12,5 +12,5 @@
 
 - (void)commonInit;
 + (NSString *)cellIdentifier;
-
+- (void) mock;
 @end

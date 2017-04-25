@@ -8,43 +8,75 @@
 
 #import "LeftMenuController.h"
 #import "LeftMenuItemModel.h"
+#import "LeftMenuItemCell.h"
+#import "LeftMenuProfileView.h"
 
-@interface LeftMenuController ()
+#define LEFT_MENU_ITEM_HEIGHT 75
+
+#define LEFT_MENU_SECTION_HEIGHT ([UIScreen mainScreen].bounds.size.height  - (LEFT_MENU_ITEM_HEIGHT * 6)) / 2
+
+@interface LeftMenuController () < UIScrollViewDelegate>
+
 @property (nonatomic, strong) NSArray<NSArray*> *sections;
+@property (nonatomic, strong) UIView* statusBarView;
 @end
 
 @implementation LeftMenuController
 
-
 - (void) setupUI {
     [super setupUI];
-    UIView * statusBarView =[[UIView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, UI_STATUSBAR_HEIGHT)];
-    statusBarView.backgroundColor=[UIColor whiteColor];
-    [self.view addSubview:statusBarView];
-    
-    self.view.backgroundColor = [UIColor whiteColor];
+//    _statusBarView = [UIView new];
+//    _statusBarView.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
+    self.tableView.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
     self.sections = @[  @[
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Собрать букет") Image:@"" RoutePath: @""],
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Примеры букетов") Image:@"" RoutePath: @""], // Перва секция (хидер с логином)
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Профиль") Image:@"" RoutePath: @""],
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Настройки") Image:@"" RoutePath: @""],
-                            ],
-                        @[
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Как это работает?") Image:@"" RoutePath: @""],
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Поддержка") Image:@"" RoutePath: @""],
-                            ],
-                        @[
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Выход") Image:@"" RoutePath: @""],
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Собрать букет")
+                                                              Image:@"getflower"
+                                                          RoutePath: @"getflower"
+                                                              Style:LeftMenuItemStyleNone],
+                            
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Примеры букетов")
+                                                              Image:@"exampleflower"
+                                                          RoutePath: @"exampleflower"
+                                                              Style:LeftMenuItemStyleNone],
+                            
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Профиль")
+                                                              Image:@"profile"
+                                                          RoutePath: @"profile"
+                                                              Style:LeftMenuItemStyleNone],
+                            
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Настройки")
+                                                              Image:@"settings"
+                                                          RoutePath: @"settings"
+                                                              Style:LeftMenuItemStyleBottomSeparator],
+                            
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Как это работает?")
+                                                              Image:@"info"
+                                                          RoutePath: @"info"
+                                                              Style:LeftMenuItemStyleNone],
+                            
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Поддержка")
+                                                              Image:@"support"
+                                                          RoutePath: @"support"
+                                                              Style:LeftMenuItemStyleNone],
+                            
+                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Выход")
+                                                              Image:@"logout"
+                                                          RoutePath: @"logout"
+                                                              Style:LeftMenuItemStyleExit],
                             ]
                         ];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    [self.tableView registerClass:[LeftMenuItemCell class] forCellReuseIdentifier:[LeftMenuItemCell cellIdentifier]];
 }
 
 - (void) setupNavBar {
     [super setupNavBar];
 }
 
+- (void) viewDidLayoutSubviews {
+    [super viewDidLayoutSubviews];
+//    [_statusBarView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height / 2)]; // TODO : trick
+}
 
 #pragma mark - Table view data source
 
@@ -57,12 +89,37 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:@"cell" forIndexPath:indexPath];
+    UITableViewCell* cell = [tableView dequeueReusableCellWithIdentifier:[LeftMenuItemCell cellIdentifier] forIndexPath:indexPath];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    cell.textLabel.text = [self.sections[indexPath.section][indexPath.row] rowLabelText];
+    [((LeftMenuItemCell*)cell) setModel:self.sections[indexPath.section][indexPath.row]];
 }
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    return [[LeftMenuProfileView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT)];
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return LEFT_MENU_SECTION_HEIGHT;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    if(indexPath.row == self.sections[indexPath.section].count - 1) {
+        return LEFT_MENU_SECTION_HEIGHT;
+    }
+    
+    return LEFT_MENU_ITEM_HEIGHT;
+}
+
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
+//    CGFloat sectionHeaderHeight = LEFT_MENU_SECTION_HEIGHT;
+//    if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
+//        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
+//    } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
+//        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
+//    }
+//}
 
 @end

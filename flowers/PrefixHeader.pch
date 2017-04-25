@@ -13,7 +13,7 @@
 #import <Foundation/Foundation.h>
 #import "BaseViewController.h"
 #import "BaseTableViewController.h"
-
+#import "BaseView.h"
 #endif
 
 #define UDID ([[[UIDevice currentDevice] identifierForVendor] UUIDString])

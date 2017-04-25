@@ -24,12 +24,14 @@
 }
 
 - (void)commonInit {
-    self.selectionStyle = UITableViewCellSelectionStyleNone;
+    self.selectionStyle = UITableViewCellSelectionStyleDefault;
 }
 
 + (NSString *)cellIdentifier {
     return NSStringFromClass(self);
 }
 
-
+- (void) mock {
+    
+}
 @end
