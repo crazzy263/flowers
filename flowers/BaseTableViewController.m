@@ -21,7 +21,7 @@
     UITableView *tableView    = [[UITableView alloc] initWithFrame:CGRectZero style:UITableViewStylePlain];
     tableView.delegate        = self;
     tableView.dataSource      = self;
-    tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
     
     // We are not using UITableViewController because we don't want the view to be the tableview
     [self.view addSubview:tableView];
@@ -35,7 +35,7 @@
 - (void) viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
     
-    self.tableView.frame = CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height);
+    self.tableView.frame = CGRectMake(0, UI_STATUSBAR_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - UI_STATUSBAR_HEIGHT);
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {

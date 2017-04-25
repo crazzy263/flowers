@@ -54,7 +54,7 @@
 }
 
 - (void)pushLeft {
-    [(AppDelegate *)[[UIApplication sharedApplication] delegate] goTo:@"flowers://left"];
+    RouterNavigate(URL_NAVIGATE_MENU);
 }
 
 @end

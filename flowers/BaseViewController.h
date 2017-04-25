@@ -10,6 +10,7 @@
 #import <WAAppRouting/WAAppRouting.h>
 #import <PPRevealSideViewController/PPRevealSideViewController.h>
 #import "AppDelegate.h"
+#import "AppConfigurator.h"
 
 @interface BaseViewController : UIViewController  <WAAppRouterTargetControllerProtocol>
 
