@@ -10,13 +10,15 @@
 
 @implementation LeftMenuItemModel
 
-- (instancetype) initWithText : (NSString*) text Image : (NSString*) image RoutePath : (NSString*) route Style : (LeftMenuItemStyle) style {
+
+- (instancetype) initWithText:(NSString *)text Image:(NSString *)image RoutePath:(NSString *)route Style:(LeftMenuItemStyle)style TapHandler:(ItemTapHandler)handler {
     self = [super init];
     if (self) {
         self.rowLabelText = text;
         self.rowImage = image;
         self.rowRoute = route;
         self.rowStyle = style;
+        self.itemTapHandler = handler;
     }
     return self;
 }

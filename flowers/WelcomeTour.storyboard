@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Walkthrough View Controller-->
+        <scene sceneID="fXw-Yq-nPB">
+            <objects>
+                <viewController storyboardIdentifier="WalkthroughVC" automaticallyAdjustsScrollViewInsets="NO" id="jRn-bN-71L" customClass="WalkthroughViewController" customModule="flowers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hMP-W5-Qc5"/>
+                        <viewControllerLayoutGuide type="bottom" id="rqT-4S-exW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="dU3-HB-sW8">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Pft-rr-oKO">
+                                <rect key="frame" x="16" y="124" width="343" height="313"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Pft-rr-oKO" secondAttribute="height" multiplier="1:1" constant="30" id="Xb7-gc-DPI"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МАТЧ! КЛУБ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ytC-kP-4js">
+                                <rect key="frame" x="16" y="545" width="343" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="74" id="KFQ-mo-g2L"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.1293496341" green="0.1293457448" blue="0.12934795020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МАТЧ! КЛУБ" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MF2-FI-QlV">
+                                <rect key="frame" x="16" y="473" width="343" height="29"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <color key="textColor" red="0.1293496341" green="0.1293457448" blue="0.12934795020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="ytC-kP-4js" secondAttribute="trailing" constant="16" id="1Gf-Y5-CCi"/>
+                            <constraint firstAttribute="centerX" secondItem="MF2-FI-QlV" secondAttribute="centerX" id="FtU-uY-tEY"/>
+                            <constraint firstItem="MF2-FI-QlV" firstAttribute="top" secondItem="Pft-rr-oKO" secondAttribute="bottom" constant="36" id="GXc-yd-GLj"/>
+                            <constraint firstItem="MF2-FI-QlV" firstAttribute="leading" secondItem="dU3-HB-sW8" secondAttribute="leading" constant="16" id="Ix0-Ab-2bI"/>
+                            <constraint firstAttribute="trailing" secondItem="MF2-FI-QlV" secondAttribute="trailing" constant="16" id="Joo-9x-Zdb"/>
+                            <constraint firstAttribute="bottom" secondItem="MF2-FI-QlV" secondAttribute="bottom" constant="165" id="L3b-SI-jvj"/>
+                            <constraint firstAttribute="centerX" secondItem="Pft-rr-oKO" secondAttribute="centerX" id="O0y-kT-pr9"/>
+                            <constraint firstAttribute="centerX" secondItem="ytC-kP-4js" secondAttribute="centerX" id="Wcx-ty-rG0"/>
+                            <constraint firstItem="ytC-kP-4js" firstAttribute="leading" secondItem="dU3-HB-sW8" secondAttribute="leading" constant="16" id="aPq-Lu-mzT"/>
+                            <constraint firstItem="Pft-rr-oKO" firstAttribute="width" secondItem="dU3-HB-sW8" secondAttribute="width" multiplier="1:3" constant="218" id="dQo-qw-vxM"/>
+                            <constraint firstItem="ytC-kP-4js" firstAttribute="top" secondItem="MF2-FI-QlV" secondAttribute="bottom" constant="43" id="yaD-vg-ht2"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="detailLabel" destination="ytC-kP-4js" id="1su-9i-kSI"/>
+                        <outlet property="imageView" destination="Pft-rr-oKO" id="m34-Gl-edV"/>
+                        <outlet property="titleLabel" destination="MF2-FI-QlV" id="nU0-St-xPn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1K-MN-LiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1584.8" y="-1664.617691154423"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="O4g-YI-cYj">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeVC" automaticallyAdjustsScrollViewInsets="NO" id="abY-Il-HtP" customClass="WelcomeViewController" customModule="flowers" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OX5-ET-tkB"/>
+                        <viewControllerLayoutGuide type="bottom" id="fhe-k9-RC0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Yng-T8-iug">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7GG-gB-r96">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <connections>
+                                    <segue destination="j5F-up-M0t" kind="embed" identifier="embed" id="5te-qX-djg"/>
+                                </connections>
+                            </containerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="gNb-Bp-9Gv">
+                                <rect key="frame" x="0.0" y="620" width="375" height="37"/>
+                            </pageControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gtc-1w-uZo">
+                                <rect key="frame" x="239" y="28" width="120" height="42"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
+                                <state key="normal" title="Пропустить">
+                                    <color key="titleColor" red="0.96078431369999995" green="0.75686274509999996" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="dismiss:" destination="abY-Il-HtP" eventType="touchUpInside" id="pIH-Ie-D6m"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="fhe-k9-RC0" firstAttribute="top" secondItem="Gtc-1w-uZo" secondAttribute="bottom" constant="597" id="2Zx-AO-UyY"/>
+                            <constraint firstItem="7GG-gB-r96" firstAttribute="leading" secondItem="Yng-T8-iug" secondAttribute="leading" id="50p-J2-f5e"/>
+                            <constraint firstItem="fhe-k9-RC0" firstAttribute="top" secondItem="gNb-Bp-9Gv" secondAttribute="bottom" constant="10" id="Jor-me-ZmZ"/>
+                            <constraint firstAttribute="centerX" secondItem="Gtc-1w-uZo" secondAttribute="centerX" constant="-111.5" id="NPw-74-zXE"/>
+                            <constraint firstAttribute="trailing" secondItem="7GG-gB-r96" secondAttribute="trailing" id="P8G-36-Q7f"/>
+                            <constraint firstItem="fhe-k9-RC0" firstAttribute="top" secondItem="7GG-gB-r96" secondAttribute="bottom" id="YJS-MP-THx"/>
+                            <constraint firstItem="gNb-Bp-9Gv" firstAttribute="leading" secondItem="Yng-T8-iug" secondAttribute="leading" id="c1X-up-sny"/>
+                            <constraint firstItem="7GG-gB-r96" firstAttribute="top" secondItem="Yng-T8-iug" secondAttribute="top" id="nh6-nO-vlv"/>
+                            <constraint firstAttribute="trailing" secondItem="gNb-Bp-9Gv" secondAttribute="trailing" id="w15-ll-QGY"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <connections>
+                        <outlet property="pageControl" destination="gNb-Bp-9Gv" id="hLH-lY-mnI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q6P-Un-ZcR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-56" y="-1664"/>
+        </scene>
+        <!--Page View Controller-->
+        <scene sceneID="ddN-b4-OBP">
+            <objects>
+                <pageViewController autoresizesArchivedViewToFullSize="NO" automaticallyAdjustsScrollViewInsets="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="j5F-up-M0t" sceneMemberID="viewController">
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                </pageViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="75O-a9-qot" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="773" y="-1664"/>
+        </scene>
+    </scenes>
+</document>

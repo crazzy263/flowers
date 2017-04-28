@@ -21,6 +21,11 @@
 		441764AF1EAF696D004632CA /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441764AE1EAF696D004632CA /* SideViewController.m */; };
 		441764B31EAF6C0B004632CA /* AppConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 441764B21EAF6C0B004632CA /* AppConfigurator.m */; };
 		441764B81EAF78EF004632CA /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441764B71EAF78EF004632CA /* WelcomeViewController.m */; };
+		4471D0891EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0881EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m */; };
+		4471D08C1EB36D6C00AC1DAD /* WalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D08B1EB36D6C00AC1DAD /* WalkthroughViewController.m */; };
+		4471D0941EB3880600AC1DAD /* WelcomeTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0931EB3880600AC1DAD /* WelcomeTourModel.m */; };
+		4471D0961EB3944D00AC1DAD /* WelcomeTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4471D0951EB3944D00AC1DAD /* WelcomeTour.storyboard */; };
+		4471D0991EB3A05900AC1DAD /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0981EB3A05900AC1DAD /* RegisterViewController.m */; };
 		44CE4EA91E89250200F3C397 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE4EA81E89250200F3C397 /* BaseView.m */; };
 		44CE4EAC1E89275B00F3C397 /* LeftMenuItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE4EAB1E89275B00F3C397 /* LeftMenuItemModel.m */; };
 		44CE4EB01E893A5400F3C397 /* CollectFlowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE4EAF1E893A5400F3C397 /* CollectFlowersViewController.m */; };
@@ -57,6 +62,15 @@
 		441764B21EAF6C0B004632CA /* AppConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigurator.m; sourceTree = "<group>"; };
 		441764B61EAF78EF004632CA /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		441764B71EAF78EF004632CA /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		4471D0871EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TransparentNavigationController.h"; sourceTree = "<group>"; };
+		4471D0881EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TransparentNavigationController.m"; sourceTree = "<group>"; };
+		4471D08A1EB36D6C00AC1DAD /* WalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughViewController.h; sourceTree = "<group>"; };
+		4471D08B1EB36D6C00AC1DAD /* WalkthroughViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WalkthroughViewController.m; sourceTree = "<group>"; };
+		4471D0921EB3880600AC1DAD /* WelcomeTourModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeTourModel.h; sourceTree = "<group>"; };
+		4471D0931EB3880600AC1DAD /* WelcomeTourModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeTourModel.m; sourceTree = "<group>"; };
+		4471D0951EB3944D00AC1DAD /* WelcomeTour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WelcomeTour.storyboard; sourceTree = "<group>"; };
+		4471D0971EB3A05900AC1DAD /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		4471D0981EB3A05900AC1DAD /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		44CE4EA71E89250200F3C397 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		44CE4EA81E89250200F3C397 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		44CE4EAA1E89275B00F3C397 /* LeftMenuItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuItemModel.h; sourceTree = "<group>"; };
@@ -152,6 +166,8 @@
 				44CE4EAB1E89275B00F3C397 /* LeftMenuItemModel.m */,
 				0DC020F51EAFE1510078A4D0 /* LeftMenuProfileModel.h */,
 				0DC020F61EAFE1510078A4D0 /* LeftMenuProfileModel.m */,
+				4471D0921EB3880600AC1DAD /* WelcomeTourModel.h */,
+				4471D0931EB3880600AC1DAD /* WelcomeTourModel.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -250,8 +266,12 @@
 		441764B41EAF78D1004632CA /* WelcomeTour */ = {
 			isa = PBXGroup;
 			children = (
+				4471D0951EB3944D00AC1DAD /* WelcomeTour.storyboard */,
+				4471D08E1EB3875100AC1DAD /* RegisterViewColder */,
 				441764B61EAF78EF004632CA /* WelcomeViewController.h */,
 				441764B71EAF78EF004632CA /* WelcomeViewController.m */,
+				4471D08A1EB36D6C00AC1DAD /* WalkthroughViewController.h */,
+				4471D08B1EB36D6C00AC1DAD /* WalkthroughViewController.m */,
 			);
 			name = WelcomeTour;
 			sourceTree = "<group>";
@@ -261,6 +281,15 @@
 			children = (
 			);
 			name = RegisterTour;
+			sourceTree = "<group>";
+		};
+		4471D08E1EB3875100AC1DAD /* RegisterViewColder */ = {
+			isa = PBXGroup;
+			children = (
+				4471D0971EB3A05900AC1DAD /* RegisterViewController.h */,
+				4471D0981EB3A05900AC1DAD /* RegisterViewController.m */,
+			);
+			name = RegisterViewColder;
 			sourceTree = "<group>";
 		};
 		44CE4EA61E8924ED00F3C397 /* Views */ = {
@@ -275,6 +304,8 @@
 			children = (
 				44CE4EB51E893E2E00F3C397 /* PPRevealSideViewController+WAAppRoutingContainerPresentationProtocol.h */,
 				44CE4EB61E893E2E00F3C397 /* PPRevealSideViewController+WAAppRoutingContainerPresentationProtocol.m */,
+				4471D0871EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.h */,
+				4471D0881EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -359,6 +390,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEFDF591E86E8A300FD2D52 /* LaunchScreen.storyboard in Resources */,
+				4471D0961EB3944D00AC1DAD /* WelcomeTour.storyboard in Resources */,
 				0DEFDF561E86E8A300FD2D52 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +453,7 @@
 				44CE4EB01E893A5400F3C397 /* CollectFlowersViewController.m in Sources */,
 				44CE4EAC1E89275B00F3C397 /* LeftMenuItemModel.m in Sources */,
 				0D09648F1E87F0FD00C2AA53 /* BaseViewController.m in Sources */,
+				4471D08C1EB36D6C00AC1DAD /* WalkthroughViewController.m in Sources */,
 				0DC020F71EAFE1510078A4D0 /* LeftMenuProfileModel.m in Sources */,
 				0DEFDF4E1E86E8A300FD2D52 /* AppDelegate.m in Sources */,
 				44CE4EB71E893E2E00F3C397 /* PPRevealSideViewController+WAAppRoutingContainerPresentationProtocol.m in Sources */,
@@ -428,8 +461,11 @@
 				0DC020F41EAFE1490078A4D0 /* LeftMenuProfileView.m in Sources */,
 				0DEFDF4B1E86E8A300FD2D52 /* main.m in Sources */,
 				0D0964851E87F06900C2AA53 /* LeftMenuController.m in Sources */,
+				4471D0941EB3880600AC1DAD /* WelcomeTourModel.m in Sources */,
+				4471D0891EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m in Sources */,
 				0DC020F11EAFE13F0078A4D0 /* LeftMenuItemCell.m in Sources */,
 				44CE4EA91E89250200F3C397 /* BaseView.m in Sources */,
+				4471D0991EB3A05900AC1DAD /* RegisterViewController.m in Sources */,
 				0D0964921E87F1C600C2AA53 /* BaseTableViewCell.m in Sources */,
 				0D09648C1E87F0E800C2AA53 /* BaseTableViewController.m in Sources */,
 				441764AF1EAF696D004632CA /* SideViewController.m in Sources */,

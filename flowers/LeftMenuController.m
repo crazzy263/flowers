@@ -18,51 +18,71 @@
 @interface LeftMenuController () < UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray<NSArray*> *sections;
-@property (nonatomic, strong) UIView* statusBarView;
 @end
 
 @implementation LeftMenuController
 
 - (void) setupUI {
     [super setupUI];
-//    _statusBarView = [UIView new];
-//    _statusBarView.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
     self.tableView.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
     self.sections = @[  @[
-                            [[LeftMenuItemModel alloc] initWithText: NSLS(@"Собрать букет")
-                                                              Image:@"getflower"
-                                                          RoutePath: @"getflower"
-                                                              Style:LeftMenuItemStyleNone],
-                            
+
+                             
+                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Собрать букет")
+                                                               Image:@"getflower"
+                                                           RoutePath: @"getflower"
+                                                               Style:LeftMenuItemStyleNone
+                                                          TapHandler:^{
+                                                              
+                                                          }],
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Примеры букетов")
                                                               Image:@"exampleflower"
                                                           RoutePath: @"exampleflower"
-                                                              Style:LeftMenuItemStyleNone],
+                                                              Style:LeftMenuItemStyleNone
+                                                         TapHandler:^{
+                                                             
+                                                         }],
+                         
                             
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Профиль")
                                                               Image:@"profile"
                                                           RoutePath: @"profile"
-                                                              Style:LeftMenuItemStyleNone],
+                                                              Style:LeftMenuItemStyleNone
+                                                         TapHandler:^{
+                                                             
+                                                         }],
                             
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Настройки")
                                                               Image:@"settings"
                                                           RoutePath: @"settings"
-                                                              Style:LeftMenuItemStyleBottomSeparator],
+                                                              Style:LeftMenuItemStyleBottomSeparator
+                                                         TapHandler:^{
+                                                             
+                                                         }],
                             
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Как это работает?")
                                                               Image:@"info"
                                                           RoutePath: @"info"
-                                                              Style:LeftMenuItemStyleNone],
+                                                              Style:LeftMenuItemStyleNone
+                                                         TapHandler:^{
+                                                             RouterNavigate(URL_NAVIGATE_WELCOME);
+                                                         }],
                             
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Поддержка")
                                                               Image:@"support"
                                                           RoutePath: @"support"
-                                                              Style:LeftMenuItemStyleNone],
+                                                              Style:LeftMenuItemStyleNone
+                                                         TapHandler:^{
+                                                             
+                                                         }],
                             
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Выход")
                                                               Image:@"logout"
                                                           RoutePath: @"logout"
-                                                              Style:LeftMenuItemStyleExit],
+                                                              Style:LeftMenuItemStyleExit
+                                                         TapHandler:^{
+                                                             
+                                                         }],
                             ]
                         ];
     
@@ -75,7 +95,6 @@
 
 - (void) viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
-//    [_statusBarView setFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height / 2)]; // TODO : trick
 }
 
 #pragma mark - Table view data source
@@ -113,13 +132,11 @@
     return LEFT_MENU_ITEM_HEIGHT;
 }
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView {
-//    CGFloat sectionHeaderHeight = LEFT_MENU_SECTION_HEIGHT;
-//    if (scrollView.contentOffset.y<=sectionHeaderHeight&&scrollView.contentOffset.y>=0) {
-//        scrollView.contentInset = UIEdgeInsetsMake(-scrollView.contentOffset.y, 0, 0, 0);
-//    } else if (scrollView.contentOffset.y>=sectionHeaderHeight) {
-//        scrollView.contentInset = UIEdgeInsetsMake(-sectionHeaderHeight, 0, 0, 0);
-//    }
-//}
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    LeftMenuItemCell* cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    if(cell.model.itemTapHandler != nil) {
+        cell.model.itemTapHandler();
+    }
+}
 @end

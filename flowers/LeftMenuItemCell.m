@@ -76,4 +76,5 @@
     _textView.text = model.rowLabelText;
 }
 
+
 @end

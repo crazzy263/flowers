@@ -81,7 +81,10 @@
     
     application.window.rootViewController = revealSideViewController;
     [application.window makeKeyAndVisible];
-      RouterNavigate(URL_NAVIGATE_COLLECTFLOWERS);
+    
+    application.window.tintColor = [UIColor colorWithRed:245.0f/255.0f green:193.0f/255.0f blue:191.0f/255.0f alpha:1.0f];
+    
+    RouterNavigate(URL_NAVIGATE_COLLECTFLOWERS);
 }
 
 - (BOOL) processUrlScheme : (NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
