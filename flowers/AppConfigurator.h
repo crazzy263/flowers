@@ -22,6 +22,13 @@
 
 @property (nonatomic, assign) BOOL isTourShowed;
 
+@property (nonatomic) NSInteger loggedType; // 0none -  1vk  - 2fb -  3sms
+@property (nonatomic, assign) BOOL loggedIn;
+
+@property (nonatomic ,assign) BOOL showOnlyRegister;
+@property (nonatomic, strong) NSString* vkEmail;
+@property (nonatomic, strong) NSString* vkUserName;
+@property (nonatomic, strong) NSString* vkPhoto;
 + (instancetype)sharedInstance;
 
 - (void)configure:(AppDelegate *)application;
@@ -30,4 +37,6 @@
 
 - (void) openAppUrl : (NSString*) url ;
 
+- (void)authorize:(NSInteger)type;
+- (void)logout;
 @end

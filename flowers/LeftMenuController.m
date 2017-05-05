@@ -23,6 +23,7 @@
 @implementation LeftMenuController
 
 - (void) setupUI {
+     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authorized) name:@"authFinished" object:nil];
     [super setupUI];
     self.tableView.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
     self.sections = @[  @[
@@ -81,12 +82,17 @@
                                                           RoutePath: @"logout"
                                                               Style:LeftMenuItemStyleExit
                                                          TapHandler:^{
+                                                             [[AppConfigurator sharedInstance] logout];
                                                              
                                                          }],
                             ]
                         ];
     
     [self.tableView registerClass:[LeftMenuItemCell class] forCellReuseIdentifier:[LeftMenuItemCell cellIdentifier]];
+}
+
+-(void) authorized {
+    [self.tableView reloadData];
 }
 
 - (void) setupNavBar {
@@ -104,7 +110,10 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.sections objectAtIndex:section] count];
+    if([AppConfigurator sharedInstance].loggedIn) {
+          return [[self.sections objectAtIndex:section] count];
+    }
+    return [[self.sections objectAtIndex:section] count] - 1 ;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -117,7 +126,9 @@
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    return [[LeftMenuProfileView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT)];
+    LeftMenuProfileView* view = [[LeftMenuProfileView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT)];
+    view.parentControllerDelegate = self;
+    return view;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {

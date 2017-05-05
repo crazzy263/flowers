@@ -14,6 +14,7 @@
         <!--Walkthrough View Controller-->
         <scene sceneID="fXw-Yq-nPB">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U1K-MN-LiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController storyboardIdentifier="WalkthroughVC" automaticallyAdjustsScrollViewInsets="NO" id="jRn-bN-71L" customClass="WalkthroughViewController" customModule="flowers" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hMP-W5-Qc5"/>
@@ -44,6 +45,11 @@
                                 <color key="textColor" red="0.1293496341" green="0.1293457448" blue="0.12934795020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PEK-gT-3TZ">
+                                <rect key="frame" x="164" y="538" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="ytC-kP-4js" secondAttribute="trailing" constant="16" id="1Gf-Y5-CCi"/>
@@ -66,7 +72,6 @@
                         <outlet property="titleLabel" destination="MF2-FI-QlV" id="nU0-St-xPn"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U1K-MN-LiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1584.8" y="-1664.617691154423"/>
         </scene>

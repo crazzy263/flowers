@@ -9,5 +9,6 @@
 #import "BaseTableViewCell.h"
 
 @interface LeftMenuProfileView : BaseView
+@property (nonatomic, weak) UIViewController* parentControllerDelegate;
 
 @end

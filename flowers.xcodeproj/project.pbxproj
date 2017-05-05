@@ -26,6 +26,7 @@
 		4471D0941EB3880600AC1DAD /* WelcomeTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0931EB3880600AC1DAD /* WelcomeTourModel.m */; };
 		4471D0961EB3944D00AC1DAD /* WelcomeTour.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4471D0951EB3944D00AC1DAD /* WelcomeTour.storyboard */; };
 		4471D0991EB3A05900AC1DAD /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0981EB3A05900AC1DAD /* RegisterViewController.m */; };
+		4471D09E1EBCAEEC00AC1DAD /* LeftIconButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D09D1EBCAEEC00AC1DAD /* LeftIconButton.m */; };
 		44CE4EA91E89250200F3C397 /* BaseView.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE4EA81E89250200F3C397 /* BaseView.m */; };
 		44CE4EAC1E89275B00F3C397 /* LeftMenuItemModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE4EAB1E89275B00F3C397 /* LeftMenuItemModel.m */; };
 		44CE4EB01E893A5400F3C397 /* CollectFlowersViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 44CE4EAF1E893A5400F3C397 /* CollectFlowersViewController.m */; };
@@ -71,6 +72,8 @@
 		4471D0951EB3944D00AC1DAD /* WelcomeTour.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = WelcomeTour.storyboard; sourceTree = "<group>"; };
 		4471D0971EB3A05900AC1DAD /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
 		4471D0981EB3A05900AC1DAD /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
+		4471D09C1EBCAEEC00AC1DAD /* LeftIconButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftIconButton.h; sourceTree = "<group>"; };
+		4471D09D1EBCAEEC00AC1DAD /* LeftIconButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LeftIconButton.m; sourceTree = "<group>"; };
 		44CE4EA71E89250200F3C397 /* BaseView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseView.h; sourceTree = "<group>"; };
 		44CE4EA81E89250200F3C397 /* BaseView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseView.m; sourceTree = "<group>"; };
 		44CE4EAA1E89275B00F3C397 /* LeftMenuItemModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LeftMenuItemModel.h; sourceTree = "<group>"; };
@@ -111,6 +114,7 @@
 		0D0964861E87F0BD00C2AA53 /* BaseUI */ = {
 			isa = PBXGroup;
 			children = (
+				4471D09B1EBCAECC00AC1DAD /* Button */,
 				441764AC1EAF6946004632CA /* SideController */,
 				44CE4EA71E89250200F3C397 /* BaseView.h */,
 				44CE4EA81E89250200F3C397 /* BaseView.m */,
@@ -292,6 +296,15 @@
 			name = RegisterViewColder;
 			sourceTree = "<group>";
 		};
+		4471D09B1EBCAECC00AC1DAD /* Button */ = {
+			isa = PBXGroup;
+			children = (
+				4471D09C1EBCAEEC00AC1DAD /* LeftIconButton.h */,
+				4471D09D1EBCAEEC00AC1DAD /* LeftIconButton.m */,
+			);
+			name = Button;
+			sourceTree = "<group>";
+		};
 		44CE4EA61E8924ED00F3C397 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -454,6 +467,7 @@
 				44CE4EAC1E89275B00F3C397 /* LeftMenuItemModel.m in Sources */,
 				0D09648F1E87F0FD00C2AA53 /* BaseViewController.m in Sources */,
 				4471D08C1EB36D6C00AC1DAD /* WalkthroughViewController.m in Sources */,
+				4471D09E1EBCAEEC00AC1DAD /* LeftIconButton.m in Sources */,
 				0DC020F71EAFE1510078A4D0 /* LeftMenuProfileModel.m in Sources */,
 				0DEFDF4E1E86E8A300FD2D52 /* AppDelegate.m in Sources */,
 				44CE4EB71E893E2E00F3C397 /* PPRevealSideViewController+WAAppRoutingContainerPresentationProtocol.m in Sources */,
@@ -587,7 +601,7 @@
 				GCC_PREFIX_HEADER = flowers/PrefixHeader.pch;
 				INFOPLIST_FILE = flowers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.flowers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vk.VKSDKTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -602,7 +616,7 @@
 				GCC_PREFIX_HEADER = flowers/PrefixHeader.pch;
 				INFOPLIST_FILE = flowers/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ru.flowers;
+				PRODUCT_BUNDLE_IDENTIFIER = com.vk.VKSDKTestApplication;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

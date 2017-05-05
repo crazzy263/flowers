@@ -9,5 +9,4 @@
 #import "BaseViewController.h"
 @class WelcomeTourModel;
 @interface RegisterViewController : BaseViewController
-@property (nonatomic, strong) WelcomeTourModel* model;
 @end

@@ -24,9 +24,15 @@
 
 - (void) setupUI {
     [super setupUI];
-
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(dismissController) name:@"authFinished" object:nil];
     
-    _dataSource = [NSArray arrayWithObjects:[WalkthroughViewController new], [WalkthroughViewController new], [WalkthroughViewController new], [WalkthroughViewController new], [RegisterViewController new], nil];
+    if([AppConfigurator sharedInstance].isTourShowed == YES && [AppConfigurator sharedInstance].showOnlyRegister == YES) {
+        [AppConfigurator sharedInstance].showOnlyRegister = NO;
+        _dataSource = [NSArray arrayWithObjects:[RegisterViewController new], nil];
+    }
+    else {
+        _dataSource = [NSArray arrayWithObjects:[WalkthroughViewController new], [WalkthroughViewController new], [WalkthroughViewController new], [WalkthroughViewController new], [RegisterViewController new], nil];
+    }
     
     
     
@@ -72,18 +78,11 @@
     NSInteger i = 0 ;
     
     for(WalkthroughViewController* controller in _dataSource) {
-        
-//        if([controller isKindOfClass:[WalkthroughViewController class]]) {
+        if([controller isKindOfClass:[WalkthroughViewController class]]) {
             [controller setModel:_models[i]];
-//        }
-
-        //        controller.view.backgroundColor = [UIColor greenColor];
-        
+        }
         ++i;
-    }
-
-
-    
+    } 
 }
 
 - (void) viewDidLayoutSubviews {
@@ -120,7 +119,9 @@
     [self.pageViewController.view removeFromSuperview];
     [self.pageViewController removeFromParentViewController];
     self.pageViewController = nil;
-    [self dismissViewControllerAnimated:YES completion:nil];
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, 0.1 * NSEC_PER_SEC), dispatch_get_main_queue(), ^{
+         [self dismissViewControllerAnimated:YES completion:nil];
+    });
 }
 
 - (void)viewWillAppear:(BOOL)animated {

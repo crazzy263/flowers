@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "AppConfigurator.h"
+#import <VK-ios-sdk/VKSdk.h>
 
 @interface AppDelegate ()
 @property (nonatomic, strong) WAAppRouter *router;
@@ -43,7 +44,11 @@
 }
 
 - (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<UIApplicationOpenURLOptionsKey,id> *)options {
-    return [[AppConfigurator sharedInstance] processUrlScheme:url options:options];
+  
+    [VKSdk processOpenURL:url fromApplication:options[UIApplicationOpenURLOptionsSourceApplicationKey]];
+    [[AppConfigurator sharedInstance] processUrlScheme:url options:options];
+    
+    return YES;
 }
 
 
@@ -54,6 +59,14 @@
     va_end(args);
     
     [self application:(UIApplication *)self openURL:[NSURL URLWithString:finalRoute] options:[NSDictionary dictionary]];
+}
+
+//iOS 8 and lower
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+{
+    [VKSdk processOpenURL:url fromApplication:sourceApplication];
+    [[AppConfigurator sharedInstance] processUrlScheme:url options:nil];
+    return YES;
 }
 
 @end
