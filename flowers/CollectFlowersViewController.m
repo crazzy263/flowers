@@ -20,10 +20,21 @@
     if (self) {
         UIImage *image = [UIImage imageNamed:@"flowers-logo"];
         self.navigationItem.titleView = [[UIImageView alloc] initWithImage:image];
-        self.view.backgroundColor = [UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f];;
+        self.view.backgroundColor =  [UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f];;
     }
     return self;
 }
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    [self.navigationController presentTransparentNavigationBar];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.navigationController hideTransparentNavigationBar];
+}
+
 
 
 - (void)setupUI {

@@ -81,6 +81,7 @@ static NSArray *SCOPE = nil;
     
     
     
+    
     self.mainRouter = [WAAppRouter defaultRouter];
     [self.mainRouter.registrar registerAppRoutePath:@"collectFlowers{CollectFlowersViewController}" presentingController:revealSideViewController];
     [self.mainRouter.registrar registerAppRoutePath:@"left{LeftMenuController}" presentingController:revealSideViewController];
@@ -112,6 +113,8 @@ static NSArray *SCOPE = nil;
     [revealSideViewController resetOption:PPRevealSideOptionsiOS7StatusBarFading];
     [revealSideViewController setOption:PPRevealSideOptionsNoStatusBar];
     [revealSideViewController resetOption:PPRevealSideOptionsShowShadows];
+    
+      [revealSideViewController setPanInteractionsWhenClosed:PPRevealSideInteractionContentView | PPRevealSideInteractionNavigationBar];
     
     application.window.rootViewController = revealSideViewController;
     [application.window makeKeyAndVisible];

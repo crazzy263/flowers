@@ -112,6 +112,11 @@
     [self.tableView registerClass:[LeftMenuItemCell class] forCellReuseIdentifier:[LeftMenuItemCell cellIdentifier]];
 }
 
+- (void) viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+//    [NSObject cancelPreviousPerformRequestsWithTarget:self selector:@selector(preloadLeft) object:nil];
+//    [self performSelector:@selector(preloadLeft) withObject:nil afterDelay:0.3];
+}
 -(void) authorized {
     [self.tableView reloadData];
 }
