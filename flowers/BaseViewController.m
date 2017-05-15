@@ -52,7 +52,7 @@
 - (void)addSideMenuButton {
     UIButton* button = [UIButton buttonWithType:UIButtonTypeCustom];
     [button setImage:[[UIImage imageNamed:@"menu"] imageWithRenderingMode:UIImageRenderingModeAlwaysTemplate] forState:UIControlStateNormal];
-    button.frame = CGRectMake(0, 0, 30.0, 30.0);
+    button.frame = CGRectMake(0, 0, 20.0, 20.0);
     UIBarButtonItem* barButton = [[UIBarButtonItem alloc] initWithCustomView:button];
     button.tintColor = [UIColor blackColor];
     [button addTarget:self action:@selector(pushLeft) forControlEvents:UIControlEventTouchUpInside];

@@ -28,7 +28,7 @@
 
 - (void) commonInit {
     [super commonInit];
-    self.backgroundColor  = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
+    self.backgroundColor  = UICOLOR_LIGHT_BLUE;
     _textName = [UILabel new];
     _textEmail = [UILabel new];
     _textNeedAuthorize = [UIButton new];
@@ -54,11 +54,11 @@
     
     [_textNeedAuthorize addTarget:self action:@selector(openAuth) forControlEvents:UIControlEventTouchUpInside];
     
-    _textName.font = [UIFont systemFontOfSize:17];
-    _textName.textColor = [UIColor blackColor];
+    _textName.font = [UIFont systemFontOfSize:15];
+    _textName.textColor = [UIColor whiteColor];
 
-    _textEmail.font = [UIFont systemFontOfSize:14];
-    _textEmail.textColor = [UIColor blackColor];
+    _textEmail.font = [UIFont systemFontOfSize:12];
+    _textEmail.textColor = [UIColor whiteColor];
    
     
     _textNeedAuthorize.titleLabel.font = [UIFont systemFontOfSize:17];

@@ -11,13 +11,17 @@
 #import "LeftMenuItemCell.h"
 #import "LeftMenuProfileView.h"
 
-#define LEFT_MENU_ITEM_HEIGHT 75
+#define LEFT_MENU_ITEMS 7
+#define LEFT_MENU_SECTION_HEIGHT 100// ([UIScreen mainScreen].bounds.size.height  - (LEFT_MENU_ITEM_HEIGHT * 6)) / 2
 
-#define LEFT_MENU_SECTION_HEIGHT ([UIScreen mainScreen].bounds.size.height  - (LEFT_MENU_ITEM_HEIGHT * 6)) / 2
+#define LEFT_MENU_ITEM_HEIGHT ([UIScreen mainScreen].bounds.size.height - (LEFT_MENU_SECTION_HEIGHT * 2)) / (LEFT_MENU_ITEMS )
+
+
 
 @interface LeftMenuController () < UIScrollViewDelegate>
 
 @property (nonatomic, strong) NSArray<NSArray*> *sections;
+@property (nonatomic, strong) LeftMenuProfileView* profile;
 @end
 
 @implementation LeftMenuController
@@ -25,7 +29,15 @@
 - (void) setupUI {
      [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(authorized) name:@"authFinished" object:nil];
     [super setupUI];
-    self.tableView.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
+    
+    
+    LeftMenuProfileView* view = [[LeftMenuProfileView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT)];
+    [self.view addSubview:view];
+    view.parentControllerDelegate = self;
+    self.profile = view;
+    
+    self.tableView.backgroundColor = [UIColor whiteColor];
+
     self.sections = @[  @[
 
                              
@@ -34,7 +46,7 @@
                                                            RoutePath: @"getflower"
                                                                Style:LeftMenuItemStyleNone
                                                           TapHandler:^{
-                                                              
+                                                              RouterNavigate(URL_NAVIGATE_COLLECTFLOWERS);
                                                           }],
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Примеры букетов")
                                                               Image:@"exampleflower"
@@ -52,6 +64,15 @@
                                                          TapHandler:^{
                                                              
                                                          }],
+                             
+                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Пригласить друзей")
+                                                               Image:@""
+                                                           RoutePath: @"profile"
+                                                               Style:LeftMenuItemStyleNone
+                                                          TapHandler:^{
+                                                              
+                                                          }],
+                             
                             
                             [[LeftMenuItemModel alloc] initWithText: NSLS(@"Настройки")
                                                               Image:@"settings"
@@ -101,6 +122,10 @@
 
 - (void) viewDidLayoutSubviews {
     [super viewDidLayoutSubviews];
+    
+    _profile.frame =  CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT);
+    self.tableView.frame = CGRectMake(0, LEFT_MENU_SECTION_HEIGHT, self.view.bounds.size.width, self.view.bounds.size.height - LEFT_MENU_SECTION_HEIGHT);
+     
 }
 
 #pragma mark - Table view data source
@@ -125,15 +150,15 @@
     [((LeftMenuItemCell*)cell) setModel:self.sections[indexPath.section][indexPath.row]];
 }
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    LeftMenuProfileView* view = [[LeftMenuProfileView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT)];
-    view.parentControllerDelegate = self;
-    return view;
-}
+//- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+//    LeftMenuProfileView* view = [[LeftMenuProfileView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, LEFT_MENU_SECTION_HEIGHT)];
+//    view.parentControllerDelegate = self;
+//    return view;
+//}
 
-- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
-    return LEFT_MENU_SECTION_HEIGHT;
-}
+//- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+//    return LEFT_MENU_SECTION_HEIGHT;
+//}
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if(indexPath.row == self.sections[indexPath.section].count - 1) {

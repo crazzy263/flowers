@@ -105,8 +105,7 @@
 				0DC020E11EAFD7D60078A4D0 /* LeftMenu */,
 				441764B51EAF78D9004632CA /* RegisterTour */,
 				441764B41EAF78D1004632CA /* WelcomeTour */,
-				44CE4EAE1E893A5400F3C397 /* CollectFlowersViewController.h */,
-				44CE4EAF1E893A5400F3C397 /* CollectFlowersViewController.m */,
+				441A2E831EC9F98B00961342 /* CollectFlowers */,
 			);
 			name = UserStories;
 			sourceTree = "<group>";
@@ -285,6 +284,15 @@
 			children = (
 			);
 			name = RegisterTour;
+			sourceTree = "<group>";
+		};
+		441A2E831EC9F98B00961342 /* CollectFlowers */ = {
+			isa = PBXGroup;
+			children = (
+				44CE4EAE1E893A5400F3C397 /* CollectFlowersViewController.h */,
+				44CE4EAF1E893A5400F3C397 /* CollectFlowersViewController.m */,
+			);
+			name = CollectFlowers;
 			sourceTree = "<group>";
 		};
 		4471D08E1EB3875100AC1DAD /* RegisterViewColder */ = {

@@ -39,7 +39,10 @@
 #define NSLS(string) NSLocalizedString(string, @"")
 
 //#define API_DEBUG
+#define UICOLOR_UILTRA_LIGHT_BLUE  [UIColor colorWithRed : 210.0f/255.0f green : 223.0f/255.0f blue : 251.0f/255.0f alpha : 1.0f]
 
+#define UICOLOR_LIGHT_BLUE     [UIColor colorWithRed : 154.0f/255.0f green : 174.0f/255.0f blue : 223.0f/255.0f alpha : 1.0f];
+#define UICOLOR_LIGHT_BLUE_HIGHLIGHTED   [UIColor colorWithRed : 164.0f/255.0f green : 180.0f/255.0f blue : 225.0f/255.0f alpha : 1.0f]
 #ifdef API_DEBUG
 #define ALog(fmt, ...) NSLog((@"%s [Line %d] " fmt), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__);
 #else

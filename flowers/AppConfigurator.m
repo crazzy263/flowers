@@ -116,10 +116,15 @@ static NSArray *SCOPE = nil;
     application.window.rootViewController = revealSideViewController;
     [application.window makeKeyAndVisible];
     
-    application.window.tintColor = [UIColor colorWithRed:245.0f/255.0f green:193.0f/255.0f blue:191.0f/255.0f alpha:1.0f];
+//    application.window.tintColor = [UIColor colorWithRed:245.0f/255.0f green:193.0f/255.0f blue:191.0f/255.0f alpha:1.0f];
     UIView* view = [UIView new];
-    view.backgroundColor = [UIColor colorWithRed:245.0f/255.0f green:218.0f/255.0f blue:218.0f/255.0f alpha:1.0f];
+    view.backgroundColor = UICOLOR_LIGHT_BLUE_HIGHLIGHTED;
     [UITableViewCell appearance].selectedBackgroundView = view;
+//    for (NSString *familyName in [UIFont familyNames]) {
+//        for (NSString *fontName in [UIFont fontNamesForFamilyName:familyName]) {
+//            NSLog(@"%@", fontName);
+//        }
+//    }
     
     RouterNavigate(URL_NAVIGATE_COLLECTFLOWERS);
 }
@@ -198,6 +203,8 @@ static NSArray *SCOPE = nil;
 
 - (void)vkSdkAuthorizationStateUpdatedWithResult:(VKAuthorizationResult *)result {
     if (result.token) {
+        
+
         self.loggedIn = YES;
         self.loggedType = 1;
         self.vkEmail = result.token.email;

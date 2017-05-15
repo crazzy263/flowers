@@ -7,6 +7,7 @@
 //
 
 #import "CollectFlowersViewController.h"
+#import "UINavigationController+TransparentNavigationController.h"
 
 @interface CollectFlowersViewController ()
 
@@ -17,7 +18,9 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        self.title = @"Collect Flowers";
+        UIImage *image = [UIImage imageNamed:@"flowers-logo"];
+        self.navigationItem.titleView = [[UIImageView alloc] initWithImage:image];
+        self.view.backgroundColor = [UIColor colorWithRed:248.0f/255.0f green:248.0f/255.0f blue:248.0f/255.0f alpha:1.0f];;
     }
     return self;
 }
