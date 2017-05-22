@@ -18,9 +18,12 @@
 		0DEFDF4E1E86E8A300FD2D52 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 0DEFDF4D1E86E8A300FD2D52 /* AppDelegate.m */; };
 		0DEFDF561E86E8A300FD2D52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DEFDF551E86E8A300FD2D52 /* Assets.xcassets */; };
 		0DEFDF591E86E8A300FD2D52 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEFDF571E86E8A300FD2D52 /* LaunchScreen.storyboard */; };
+		440BCAE71ED2D53B00B3DB2E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 440BCAE51ED2D53B00B3DB2E /* Localizable.strings */; };
 		441764AF1EAF696D004632CA /* SideViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441764AE1EAF696D004632CA /* SideViewController.m */; };
 		441764B31EAF6C0B004632CA /* AppConfigurator.m in Sources */ = {isa = PBXBuildFile; fileRef = 441764B21EAF6C0B004632CA /* AppConfigurator.m */; };
 		441764B81EAF78EF004632CA /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441764B71EAF78EF004632CA /* WelcomeViewController.m */; };
+		441A2E861ECAF2EB00961342 /* UIImage+Flowers.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A2E851ECAF2EB00961342 /* UIImage+Flowers.m */; };
+		441A2E8A1ECAF39300961342 /* SliderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 441A2E891ECAF39300961342 /* SliderView.m */; };
 		4471D0891EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0881EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m */; };
 		4471D08C1EB36D6C00AC1DAD /* WalkthroughViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D08B1EB36D6C00AC1DAD /* WalkthroughViewController.m */; };
 		4471D0941EB3880600AC1DAD /* WelcomeTourModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4471D0931EB3880600AC1DAD /* WelcomeTourModel.m */; };
@@ -57,12 +60,21 @@
 		0DEFDF551E86E8A300FD2D52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = flowers/Assets.xcassets; sourceTree = "<group>"; };
 		0DEFDF581E86E8A300FD2D52 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DEFDF5A1E86E8A300FD2D52 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = flowers/Info.plist; sourceTree = "<group>"; };
+		440BCAE31ED2D4DC00B3DB2E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		440BCAE41ED2D4F400B3DB2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		440BCAE61ED2D53B00B3DB2E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = flowers/en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		440BCAE81ED2D53F00B3DB2E /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = flowers/Base.lproj/Localizable.strings; sourceTree = "<group>"; };
+		440BCAE91ED2D54500B3DB2E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = flowers/ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		441764AD1EAF696D004632CA /* SideViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SideViewController.h; sourceTree = "<group>"; };
 		441764AE1EAF696D004632CA /* SideViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SideViewController.m; sourceTree = "<group>"; };
 		441764B11EAF6C0B004632CA /* AppConfigurator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppConfigurator.h; sourceTree = "<group>"; };
 		441764B21EAF6C0B004632CA /* AppConfigurator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppConfigurator.m; sourceTree = "<group>"; };
 		441764B61EAF78EF004632CA /* WelcomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WelcomeViewController.h; sourceTree = "<group>"; };
 		441764B71EAF78EF004632CA /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
+		441A2E841ECAF2EB00961342 /* UIImage+Flowers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Flowers.h"; sourceTree = "<group>"; };
+		441A2E851ECAF2EB00961342 /* UIImage+Flowers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Flowers.m"; sourceTree = "<group>"; };
+		441A2E881ECAF39300961342 /* SliderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SliderView.h; sourceTree = "<group>"; };
+		441A2E891ECAF39300961342 /* SliderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SliderView.m; sourceTree = "<group>"; };
 		4471D0871EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+TransparentNavigationController.h"; sourceTree = "<group>"; };
 		4471D0881EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+TransparentNavigationController.m"; sourceTree = "<group>"; };
 		4471D08A1EB36D6C00AC1DAD /* WalkthroughViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WalkthroughViewController.h; sourceTree = "<group>"; };
@@ -205,6 +217,7 @@
 		0DEFDF3D1E86E8A300FD2D52 = {
 			isa = PBXGroup;
 			children = (
+				440BCAE51ED2D53B00B3DB2E /* Localizable.strings */,
 				0DEFDF481E86E8A300FD2D52 /* flowers */,
 				0DEFDF471E86E8A300FD2D52 /* Products */,
 				C168CD3484477E87FCA51D87 /* Pods */,
@@ -289,10 +302,20 @@
 		441A2E831EC9F98B00961342 /* CollectFlowers */ = {
 			isa = PBXGroup;
 			children = (
+				441A2E871ECAF38400961342 /* SliderView */,
 				44CE4EAE1E893A5400F3C397 /* CollectFlowersViewController.h */,
 				44CE4EAF1E893A5400F3C397 /* CollectFlowersViewController.m */,
 			);
 			name = CollectFlowers;
+			sourceTree = "<group>";
+		};
+		441A2E871ECAF38400961342 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				441A2E881ECAF39300961342 /* SliderView.h */,
+				441A2E891ECAF39300961342 /* SliderView.m */,
+			);
+			name = SliderView;
 			sourceTree = "<group>";
 		};
 		4471D08E1EB3875100AC1DAD /* RegisterViewColder */ = {
@@ -327,6 +350,8 @@
 				44CE4EB61E893E2E00F3C397 /* PPRevealSideViewController+WAAppRoutingContainerPresentationProtocol.m */,
 				4471D0871EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.h */,
 				4471D0881EB369A200AC1DAD /* UINavigationController+TransparentNavigationController.m */,
+				441A2E841ECAF2EB00961342 /* UIImage+Flowers.h */,
+				441A2E851ECAF2EB00961342 /* UIImage+Flowers.m */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -392,8 +417,9 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				en,
 				Base,
+				en,
+				ru,
 			);
 			mainGroup = 0DEFDF3D1E86E8A300FD2D52;
 			productRefGroup = 0DEFDF471E86E8A300FD2D52 /* Products */;
@@ -411,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0DEFDF591E86E8A300FD2D52 /* LaunchScreen.storyboard in Resources */,
+				440BCAE71ED2D53B00B3DB2E /* Localizable.strings in Resources */,
 				4471D0961EB3944D00AC1DAD /* WelcomeTour.storyboard in Resources */,
 				0DEFDF561E86E8A300FD2D52 /* Assets.xcassets in Resources */,
 			);
@@ -474,6 +501,7 @@
 				44CE4EB01E893A5400F3C397 /* CollectFlowersViewController.m in Sources */,
 				44CE4EAC1E89275B00F3C397 /* LeftMenuItemModel.m in Sources */,
 				0D09648F1E87F0FD00C2AA53 /* BaseViewController.m in Sources */,
+				441A2E8A1ECAF39300961342 /* SliderView.m in Sources */,
 				4471D08C1EB36D6C00AC1DAD /* WalkthroughViewController.m in Sources */,
 				4471D09E1EBCAEEC00AC1DAD /* LeftIconButton.m in Sources */,
 				0DC020F71EAFE1510078A4D0 /* LeftMenuProfileModel.m in Sources */,
@@ -491,6 +519,7 @@
 				0D0964921E87F1C600C2AA53 /* BaseTableViewCell.m in Sources */,
 				0D09648C1E87F0E800C2AA53 /* BaseTableViewController.m in Sources */,
 				441764AF1EAF696D004632CA /* SideViewController.m in Sources */,
+				441A2E861ECAF2EB00961342 /* UIImage+Flowers.m in Sources */,
 				441764B31EAF6C0B004632CA /* AppConfigurator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -502,8 +531,20 @@
 			isa = PBXVariantGroup;
 			children = (
 				0DEFDF581E86E8A300FD2D52 /* Base */,
+				440BCAE31ED2D4DC00B3DB2E /* ru */,
+				440BCAE41ED2D4F400B3DB2E /* en */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		440BCAE51ED2D53B00B3DB2E /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				440BCAE61ED2D53B00B3DB2E /* en */,
+				440BCAE81ED2D53F00B3DB2E /* Base */,
+				440BCAE91ED2D54500B3DB2E /* ru */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -513,6 +554,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
@@ -561,6 +603,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";

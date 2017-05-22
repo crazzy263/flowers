@@ -37,6 +37,11 @@
     
     _imageView = [UIImageView new];
     _imageView.contentMode = UIViewContentModeScaleAspectFill;
+//    _imageView.layer.cornerRadius = self.view.bounds.size.width / 2;
+//    _imageView.layer.borderColor = UICOLOR_LIGHT_BLUE.CGColor;
+//    _imageView.layer.masksToBounds = YES;
+//    
+    
     [self.view addSubview:_titleLabel];
     [self.view addSubview:_descriptionLabel];
     [self.view addSubview:_imageView];
