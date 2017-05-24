@@ -14,15 +14,14 @@
 - (void) confirmValue : (SliderView*) slider ValidValue : (CGFloat) value;
 @end
 
-@interface SliderViewSource : NSObject
-- (instancetype) initWithValidValue : (CGFloat) validValue  AppearanceValue  : (CGFloat) value Label : (UILabel*) label;
-@end
 
 
 
 
 
 @interface SliderView : BaseView
+
+@property(nonatomic, copy) void (^sliderValueChangeHandler)(UISlider *slider);
 
 @property (nonatomic, strong) NSString* titleText;
 @property (nonatomic, strong) NSString* descrText;

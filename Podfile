@@ -17,4 +17,5 @@ target 'flowers' do
   pod 'UITextView+Placeholder'
   pod 'GoogleMaps'
   pod 'GooglePlaces'
+  pod 'ASValueTrackingSlider'
 end

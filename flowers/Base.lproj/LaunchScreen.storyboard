@@ -25,6 +25,12 @@
                                 <rect key="frame" x="83" y="135" width="209" height="309"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <slider opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="5zy-cW-vd1">
+                                <rect key="frame" x="105" y="483" width="118" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="minimumTrackTintColor" red="0.34999492764472961" green="0.5160602331161499" blue="0.61967682838439941" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="maximumTrackTintColor" red="0.94117558002471924" green="0.94117844104766846" blue="0.94118475914001465" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </slider>
                         </subviews>
                         <color key="backgroundColor" red="0.96993620802531044" green="0.98421864600557762" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <color key="tintColor" red="0.96078431372549022" green="0.75686274509803919" blue="0.74901960784313726" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>

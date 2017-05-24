@@ -23,6 +23,7 @@ PODS:
   - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - ASValueTrackingSlider (0.12.1)
   - Bolts (1.8.4):
     - Bolts/AppLinks (= 1.8.4)
     - Bolts/Tasks (= 1.8.4)
@@ -89,6 +90,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworkActivityLogger
   - AFNetworking
+  - ASValueTrackingSlider
   - FBSDKCoreKit
   - GoogleMaps
   - GooglePlaces
@@ -103,6 +105,7 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworkActivityLogger: 121486778117d53b3ab1c61d264b88081d0c3eee
   AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
+  ASValueTrackingSlider: 5261de3fcf00adb339efc93885e8f0bc99e703cd
   Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
   FBSDKCoreKit: 82eac696eb6157da5f4266c3a241f00e9bd72471
   GoogleMaps: 104c418d61ab8a05dff06ed0784c25ea9d37da45
@@ -116,6 +119,6 @@ SPEC CHECKSUMS:
   VK-ios-sdk: 7fd48bc5aaa6b96c3197c1987eb6593f2ea67331
   WAAppRouting: f678fa0dd488af81ee04aeab49e577f5ce187ae0
 
-PODFILE CHECKSUM: 77ad67afdcbf49d47c3012dc68785effbb20d665
+PODFILE CHECKSUM: c9108a922f3e48dc43ece1eb91ab99afbe398b47
 
 COCOAPODS: 1.2.0
